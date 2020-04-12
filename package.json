@@ -1,0 +1,24 @@
+{
+  "name": "nuxtApp",
+  "version": "1.0.0",
+  "description": "My wonderful Nuxt.js project",
+  "author": "pengbo",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "chart.js": "^2.9.3",
+    "echarts": "^4.7.0",
+    "element-ui": "^2.4.11",
+    "mockjs": "^1.1.0",
+    "nuxt": "^2.0.0",
+    "vue-chartjs": "^3.5.0",
+    "vue-echarts": "^5.0.0-beta.0"
+  },
+  "devDependencies": {}
+}

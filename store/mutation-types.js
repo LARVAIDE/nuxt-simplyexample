@@ -1,0 +1,5 @@
+export const GET_ITEM = "ITEM_GETITEM"
+export const GET_WEATHER = "WEATHER_GETWEATHER"
+export const GET_CHARTS = "CHARTS_GETDATA"
+export const GET_USER = "USER_GETUSER"
+export const GET_LOGIN = "LOGIN_STATUS"
