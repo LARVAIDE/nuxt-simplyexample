@@ -1,5 +1,6 @@
 import {
-  GET_USER
+  GET_USER,
+  USER_ADD
 } from "../mutation-types";
 
 export default {
@@ -10,13 +11,22 @@ export default {
   mutations: {
     [GET_USER](state, payload) {
       state.userList = payload;
+    },
+    [USER_ADD](state, payload) {
+      let userList = state.userList;
+      userList.unshift(payload);
+      state.userList = userList;
     }
   },
   actions: {
     [GET_USER]: ({
         commit
+      }, users) =>
+      commit([GET_USER], users),
+    [USER_ADD]: ({
+        commit
       }, user) =>
-      commit([GET_USER], user)
+      commit([USER_ADD], user)
   },
   getters: {
     getteruser: state => state.userList,

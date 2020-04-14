@@ -19,14 +19,14 @@
         </el-form-item>
         <el-form-item label="角色" prop="type">
           <el-select v-model="form.type" placeholder="请选择角色">
-            <el-option label="学生" value="0"></el-option>
-            <el-option label="老师" value="1"></el-option>
+            <el-option label="学生" value="学生"></el-option>
+            <el-option label="老师" value="老师"></el-option>
           </el-select>
         </el-form-item>
         <el-form-item label="权限" prop="root">
           <el-select v-model="form.root" placeholder="请选择权限">
-            <el-option label="测试" value="3"></el-option>
-            <el-option label="最高" value="4"></el-option>
+            <el-option label="测试" value="测试"></el-option>
+            <el-option label="最高" value="最高"></el-option>
           </el-select>
         </el-form-item>
         <el-form-item style="float: right">
@@ -113,11 +113,19 @@ export default {
     submitForm(formName) {
       this.$refs[formName].validate(valid => {
         if (valid) {
+          this.$store.commit("user/USER_ADD", {
+            name: this.form.name,
+            userType: this.form.type,
+            root: this.form.type
+          });
+          this.gettercount = this.gettercount + 1;
           this.$message({
             message: "添加成功！",
             offset: 90,
             type: "success"
           });
+          this.drawer = false;
+          this.$refs[formName].resetFields();
         } else {
           console.log("error submit!!");
           return false;

@@ -2,6 +2,7 @@
   <el-card class="cardBox">
     <h2 class="title">数学测试</h2>
     <el-col :span="8" v-for="Question in Qlist" :key="Question.key" class="question">
+      {{ `第${Question.key}题.` }}
       {{ Question.I }}
       {{ Question.type }}
       {{ Question.O }}

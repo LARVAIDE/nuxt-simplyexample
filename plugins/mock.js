@@ -75,7 +75,7 @@ module.exports = [
         return Mock.mock({
           [`data|${data.num}`]: [{
             "key|+1": 1,
-            "I|1": ["@integer(1, 9)"],
+            "I|1": ["@integer(10, 20)"],
             "O|1": ["@integer(1, 9)"],
             'type|1': ["+", '-'],
           }]
